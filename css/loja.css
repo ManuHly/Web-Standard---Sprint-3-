@@ -106,6 +106,10 @@ header {
     justify-content: space-between;
 }
 
+.item:hover{
+    box-shadow: 0px 0px 10px #333;
+}
+
 .item img {
     max-width: 100%;
     height: auto;
