@@ -54,6 +54,10 @@ header {
     background-color: #00000022;
 }
 
+.menu-lateral:hover{
+    box-shadow: 0px 0px 10px #333;
+}
+
 /*-------------------------------------------------------------------------------*/
 /* Estilo para o conteúdo principal */
 
