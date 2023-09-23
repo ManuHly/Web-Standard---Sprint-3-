@@ -78,7 +78,7 @@ header {
 /*-------------------------------------------------------------------------------*/
 /* Estilo para o conteúdo principal */
 
-.itens {
+.container-itens {
     margin-top: 117px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
