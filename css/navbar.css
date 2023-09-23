@@ -1,0 +1,315 @@
+:root{
+    --default-color-theme:rgb(255, 111, 255);
+    --font-size-icon:35px;
+    --font-letter-color:white;
+    --second-theme-color: rgba(188, 42, 144, 0.988);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header div{
+    height: 117px;
+    background-color: var(--default-color-theme);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/*Estilizando o logo*/
+.logo{
+    width: 230px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 0px 5px;
+    align-items: center;
+    justify-content: center;
+}
+.logo img {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.877);
+    max-width: 100%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+/*Estilizando o conteudo lateral*/
+.left-header-content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*Estilizando o menu*/
+.hidden-menu-button{
+    display: none;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.menu .hidden-login{
+    display: none;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu ul li {
+    font-size: 22px;
+    padding: 6px 0px;
+    width: 15%;
+    display: inline;
+    transition: all .5s;
+
+}
+.menu ul li:hover{
+    border-top: 2px solid white;
+}
+
+.menu ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-letter-color);
+    font-size: 18px;
+    text-wrap: nowrap;
+}
+
+/*Estilizando a barra de pesquisa*/
+.search-bar {
+    display: flex;
+    overflow: hidden;
+    transition: all .6s linear;
+    
+}
+
+.search-bar input {
+    width: 0px;
+    background-color: #ffffff00;
+    color: white;
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    transition: all .6s ;
+    z-index: 4;
+
+}
+
+input:hover{
+    border-bottom: 2px solid white;
+}
+input::placeholder{
+    font-size: 16px;
+    color: white;
+}
+
+.search-bar button {
+    background-color: rgba(255, 255, 255, 0.589); /* Cor de fundo do botão de busca */
+    color: #000000;
+    border: none;
+    border-top-right-radius: 10px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Estilizando a cart-box*/
+.cart-box{
+    width: 8%;
+    display: flex;
+    align-items: center;
+}
+.cart-icon, .search-icon {
+    width: 30px;
+    padding-right: 60px;
+    padding-left: 20px;
+    max-height: 35px;
+    color: var(--font-letter-color);
+    font-size: var(--font-size-icon);
+    cursor: pointer;
+    height: auto;
+    transition: all .3s;
+}
+.cart-icon:hover, .search-icon:hover{
+    color: #ccc;
+}
+.search-bar:hover input{
+    
+    display: block;
+    width: 200px;
+}
+
+/*resposividade*/
+@media (max-width:750px){
+    header{
+        padding: 0px 10px
+    }
+    .logo{
+        width: 180px;
+    }
+    .menu ul li a{
+        font-size: 14px;
+    }
+    .search-bar:hover input{
+        width: 130px;
+    }
+
+    .cart-icon, .search-icon {
+        width: 30px;
+        padding-right: 10px;
+        padding-left: 10px;
+        max-height: 35px;
+        color: var(--font-letter-color);
+        font-size: 25px;
+        cursor: pointer;
+        height: auto;
+        transition: all .3s;
+    }
+}
+@media (max-width:550px){
+    header{
+        flex-direction: column;
+        height: 200px;
+    }
+    .menu{
+        position: absolute;
+        width: 250px;
+        height: 100%;
+        z-index: 6;
+        top: 0;
+        left: -250px;
+        background-color: var(--default-color-theme);
+        flex-direction: column;
+        transition: all .5s;
+        border-bottom-right-radius:20px ;
+    }
+    .menu.active{
+        left: 0px;
+    }
+    .menu .hidden-login{
+        margin: 40px 0px;
+        display: flex;
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+    }
+    .menu .hidden-login input{
+        border: none;
+        outline: none;
+        height: 35px;
+        background-color: transparent;
+        width: 80%;
+        transition: all .3s;
+        border-bottom: 2px solid white;
+        margin-bottom: 10px;
+    }
+    .menu .hidden-login input::placeholder{
+        color: #000000;
+    }
+    .menu .hidden-login input:hover{
+        background-color: white;
+    
+        
+    }
+    .menu hr{
+        width: 100%;
+        border: 2px solid white;
+    }
+    .menu .hidden-login div{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0px
+    }
+    .menu .hidden-login div span{
+        display: flex;
+        padding: 8px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 4px;
+        color: white;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s;
+    }
+    .menu .hidden-login div span:hover{
+        background-color: white;
+        color: #000000;
+    }
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: left;
+    }
+    .menu ul li{
+        width: 100%;
+        height: 40px;
+
+    }
+    .menu ul li:hover{
+        border: none;
+        background-color: #db0aee;
+    }
+    .menu ul li a{
+        text-align: left;
+        padding: 0px 00px 0px 20px;
+        font-size: 17px;
+    }
+    .hidden-menu-button{
+        display: block;
+        background-color: white;
+        position: fixed;
+        top: 20px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: black;
+        transition: all .5s;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .hidden-menu-button.active{
+        left: 250px;
+        
+    }
+    .left-header-content{
+        width: 100%;
+    }
+    .search-box{
+        width: 90%;
+    }
+    .search-bar{
+        width: 100%;
+    }
+
+}
