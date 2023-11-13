@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada das Festas | Cadastre-se</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+
+    <div>
+        <form  name="form1" method="post" action="gravar.jsp">
+            <fieldset class="formulario">
+                <legend>Cadastre-se</legend>
+                
+                <label for="numCPF">CPF</label>
+                <input type="number" name="CPF" id="numCPF" required>
+
+                <label for="txtNome">Nome</label>
+                <input type="text" placeholder="Digite seu Nome" name="Nome" id="txtNome" required>
+
+                <label for="txtEmail">Email</label>
+                <input type="text" name="Email" id="txtEmail" required>
+
+                <label for="numTelefone">Telefone</label>
+                <input type="number" placeholder="Somente numeros" name="Telefone" id="numTelefone" required>
+
+                <label for="numNascimento">Data de Nascimento</label>
+                <input type="date" name="Data" id="numData" required>
+
+                <label for="txtSenha1">Crie uma senha</label>
+                <input type="text" placeholder="Digite sua nova Senha" name="Senha1" id="txtSenha1" required>
+
+                <label for="txtSenha2">Confirme sua senha</label>
+                <input type="text" placeholder="Repita sua nova Senha" name="Senha2" id="txtSenha2" required>
+
+                <input type="submit" name="Enviar" id="submit">
+
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
