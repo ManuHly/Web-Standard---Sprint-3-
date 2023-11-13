@@ -1,0 +1,29 @@
+body {
+    background-image: url('../public/random/fundo_cadastro.jpg');
+    background-repeat: repeat-y;
+    background-size:cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.formulario label{
+    padding-top: 15px;
+}
