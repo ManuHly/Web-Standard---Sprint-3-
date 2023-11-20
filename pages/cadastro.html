@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./public/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="validação.js" defer></script>
 </head>
 
 <body>
@@ -22,30 +23,30 @@
         </div>
 
         <div class="left-formulario">
-            <form  name="form1" method="post" action="gravar.jsp">
+            <form  name="form" method="post" action="../index.html">
                 <fieldset class="formulario">
                     <div class="cadastro__title">Cadastre-se</div>
                     <div class="container">
                     <label for="txtNome"></label>
-                    <input type="text" placeholder="Nome" name="Nome" id="txtNome" required>
+                    <input type="text" placeholder="Nome" name="Nome" id="txtNome">
                     <span class="login__input-border"></span>
                     <label for="numCPF"></label>
-                    <input type="number" placeholder="CPF" name="CPF" id="numCPF" required>
+                    <input type="number" placeholder="CPF" name="CPF" id="numCPF">
                     <span class="login__input-border"></span>
                     <label for="txtEmail"></label>
-                    <input type="text" placeholder="Email" name="Email" id="txtEmail" required>
+                    <input type="text" placeholder="Email" name="Email" id="txtEmail">
                     <span class="login__input-border"></span>
                     <label for="numTelefone"></label>
-                    <input type="number" placeholder="Telefone" name="Telefone" id="numTelefone" required>
+                    <input type="number" placeholder="Telefone" name="Telefone" id="numTelefone">
                     <span class="login__input-border"></span>
                     <label for="numNascimento">Data de Nascimento</label>
-                    <input type="date" name="Data" id="numData" required>
+                    <input type="date" name="Data" id="numData">
                     <span class="login__input-border"></span>
                     <label for="txtSenha1"></label>
-                    <input type="text" placeholder="Crie sua Senha" name="Senha1" id="txtSenha1" required>
+                    <input type="text" placeholder="Crie sua Senha" name="Senha1" id="txtSenha1">
                     <span class="login__input-border"></span>
                     <label for="txtSenha2"></label>
-                    <input type="text" placeholder="Confirme sua Senha" name="Senha2" id="txtSenha2" required>
+                    <input type="text" placeholder="Confirme sua Senha" name="Senha2" id="txtSenha2">
                     <span class="login__input-border"></span>
                     <input type="submit" name="Enviar" id="submit" >
                     <a class="login__reset" href="../index.html">Entrar</a>
