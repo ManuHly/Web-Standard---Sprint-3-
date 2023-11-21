@@ -7,10 +7,10 @@ var numNascimentoInput = document.querySelector("#numData")
 let txtSenha1Input = document.querySelector("#txtSenha1")
 let txtSenha2Input = document.querySelector("#txtSenha2")
 
-//validação de Nome
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    //validação de Nome
 
     if (txtNomeInput.value === "") {
         alert("Por favor, insira o seu nome.");
