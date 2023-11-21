@@ -22,18 +22,17 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
+    //validação de CPF
+
+    if (numCPFInput.value === "" || !isCPFValid(numCPFInput.value)) {
+        alert("Por favor, insira o seu CPF nesse formato: 000.000.000-00");
+        return;
+    }
+
     //validação de Email 
 
     if (txtEmailInput.value === "" || !isEmailValid(txtEmailInput.value)) {
         alert("Por favor, insira o seu email.");
-        return;
-    }
-
-    //validação de CPF
-
-
-    if (numCPFInput.value === "" || !isCPFValid(numCPFInput.value)) {
-        alert("Por favor, insira o seu CPF nesse formato: 000.000.000-00");
         return;
     }
 
