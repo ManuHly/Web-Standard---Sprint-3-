@@ -4,8 +4,8 @@ var txtEmailInput = document.querySelector("#txtEmail")
 var numCPFInput = document.querySelector("#numCPF")
 var numTelefoneInput = document.querySelector("#numTelefone")
 var numNascimentoInput = document.querySelector("#numData")
-var txtSenha1Input = document.querySelector("#txtSenha1")
-var txtSenha2Input = document.querySelector("#txtSenha2")
+let txtSenha1Input = document.querySelector("#txtSenha1")
+let txtSenha2Input = document.querySelector("#txtSenha2")
 
 //validação de Nome
 
