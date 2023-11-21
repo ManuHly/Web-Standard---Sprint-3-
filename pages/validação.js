@@ -1,11 +1,11 @@
-const form = document.querySelector("form")
-const txtNomeInput = document.querySelector("#txtNome")
-const txtEmailInput = document.querySelector("#txtEmail")
-const numCPFInput = document.querySelector("#numCPF")
-const numTelefoneInput = document.querySelector("#numTelefone")
-const numNascimentoInput = document.querySelector("#numData")
-const txtSenha1Input = document.querySelector("#txtSenha1")
-const txtSenha2Input = document.querySelector("#txtSenha2")
+var form = document.querySelector("form")
+var txtNomeInput = document.querySelector("#txtNome")
+var txtEmailInput = document.querySelector("#txtEmail")
+var numCPFInput = document.querySelector("#numCPF")
+var numTelefoneInput = document.querySelector("#numTelefone")
+var numNascimentoInput = document.querySelector("#numData")
+var txtSenha1Input = document.querySelector("#txtSenha1")
+var txtSenha2Input = document.querySelector("#txtSenha2")
 
 //validação de Nome
 
@@ -65,7 +65,7 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
-    if (!validatePassword2(txtSenha2Input.value, 8)) {
+    if (!validatePassword2(txtSenha2Input, txtSenha1Input)) {
         alert("A senhas precisam ser iguais!")
         return;
     }
@@ -112,8 +112,8 @@ function validatePassword(txtSenha1Input, minDigits) {
     return false
 }
 
-function validatePassword2(txtSenha2Input, minDigits) {
-    if (txtSenha2Input.length >= minDigits) {
+function validatePassword2(txtSenha2Input, txtSenha1Input) {
+    if (txtSenha2Input.value == txtSenha1Input.value) {
         return true
     }
     return false
