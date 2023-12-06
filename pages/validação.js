@@ -1,16 +1,16 @@
-var form = document.querySelector("form")
-var txtNomeInput = document.querySelector("#txtNome")
-var txtEmailInput = document.querySelector("#txtEmail")
-var numCPFInput = document.querySelector("#numCPF")
-var numTelefoneInput = document.querySelector("#numTelefone")
-var numNascimentoInput = document.querySelector("#numData")
-let txtSenha1Input = document.querySelector("#txtSenha1")
-let txtSenha2Input = document.querySelector("#txtSenha2")
+var form = document.getElementById("form")
+var txtNomeInput = document.getElementById("txtNome")
+var txtEmailInput = document.getElementById("txtEmail")
+var numCPFInput = document.getElementById("numCPF")
+var numTelefoneInput = document.getElementById("numTelefone")
+var numNascimentoInput = document.getElementById("numData")
+let txtSenha1Input = document.getElementById("txtSenha1")
+let txtSenha2Input = document.getElementById("txtSenha2")
+
+//validação de Nome
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    //validação de Nome
 
     if (txtNomeInput.value === "") {
         alert("Por favor, insira o seu nome.");
@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
     //validação de CPF
 
     if (numCPFInput.value === "" || !isCPFValid(numCPFInput.value)) {
-        alert("Por favor, insira o seu CPF nesse formato: 000.000.000-00");
+        alert('Por favor, insira um CPF valido "xxx.xxx.xxx-xx"');
         return;
     }
 
@@ -36,10 +36,11 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
+
     //validação de Telefone
 
-    if (numTelefoneInput.value === "") {
-        alert("Por favor, insira o seu telefone.");
+    if (numTelefoneInput.value === "" || !isTelefoneValid(numTelefoneInput.value)) {
+        alert('Por favor, insira um telefone valido "(xx)xxxx-xxxx"');
         return;
     }
 
@@ -58,7 +59,7 @@ form.addEventListener('submit', (event) => {
     }
 
     //validação de Confirmar Senha
-    
+
     if (txtSenha2Input.value === "") {
         alert("Por favor, confirme sua senha.");
         return;
@@ -70,6 +71,12 @@ form.addEventListener('submit', (event) => {
     }
 
     alert("Cadastro realizado com Sucesso!!");
+
+    form.method = "POST";
+    form.action = "gravar.jsp";
+
+    form.submit();
+
 })
 
 
@@ -94,9 +101,20 @@ function isEmailValid(txtEmail) {
 
 function isCPFValid(numCPF) {
     const numCPFRegex = new RegExp(
-        /^[0-9]+.[0-9]+.[0-9]+-[0-9]{2,}$/
+        /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
     );
     if (numCPFRegex.test(numCPF)) {
+        return true;
+    }
+
+    return false;
+}
+
+function isTelefoneValid(numTelefone) {
+    const numTelefoneRegex = new RegExp(
+        /^\(\d{2}\)\d{5}-\d{4}$/
+    );
+    if (numTelefoneRegex.test(numTelefone)) {
         return true;
     }
 
