@@ -202,10 +202,10 @@
         <!--Login-->
         <div class="login__container">
             <h1 class="login__title">Login</h1>
-            <form class="login__form">
-                <input class="login__input" type="email" placeholder="Digite seu e-mail" />
+            <form class="login__form" method="post" action="pages/verificalogin.jsp">
+                <input class="login__input" type="email" placeholder="Digite seu e-mail" name="txtEmailLogin"/>
                 <span class="login__input-border"></span>
-                <input class="login__input" type="password" placeholder="Digite sua senha" />
+                <input class="login__input" type="password" placeholder="Digite sua senha" name="txtSenhaLogin"/>
                 <span class="login__input-border"></span>
                 <button class="login__submit">Login</button>
                 <a class="login__reset" href="#">Esqueceu a senha?</a>
