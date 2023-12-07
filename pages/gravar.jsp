@@ -42,6 +42,6 @@ stm.close();
 
 out.print("Dados Gravados com sucesso!!!");
 out.print("<br><br>");
-out.print("<a href = 'cadastro.html'>Voltar</a>");
+out.print("<a href='../index.html'>Logar</a>");
 
 %>
