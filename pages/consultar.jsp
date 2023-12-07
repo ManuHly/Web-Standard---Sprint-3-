@@ -1,5 +1,21 @@
 <%@page language="java" import="java.sql.*" %>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta JSP</title>
+    <style>
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+        tr:hover{
+            background-color: #6495ED;
+        }
+    </style>
+</head>
+<body>
+
 <% 
     //Verifica se existe uma sessão
     if (session.getAttribute("usuario") == null) {
@@ -81,3 +97,5 @@
     }   
 
 %>
+</body>
+</html>
